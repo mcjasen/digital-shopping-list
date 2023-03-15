@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <link rel="icon" href="<%= BASE_URL %>favicon.ico">
+    <title><%= htmlWebpackPlugin.options.title %></title>
+    <!-- font awesome V 5.10 -->
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+  </head>
+  <body>
+    <noscript>
+      <strong>We're sorry but <%= htmlWebpackPlugin.options.title %> doesn't work properly without JavaScript enabled. Please enable it to continue.</strong>
+    </noscript>
+    <div id="app"></div>
+    <!-- built files will be auto injected -->
+  </body>
+</html>
+
+<style>
+body{
+  color:#2F4858;
+  width: 100vw;
+  height: 100vh;
+}
+
+@media(min-width: 1101px) {
+  html{
+    font-size: 12px;
+  }
+}
+
+@media(max-width:1100px){
+  html{
+    font-size: 100%;
+  }
+}
+
+@media(max-width:400px){
+  html{
+    font-size: 80%;
+  }
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: grey;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-track {
+  display: none;
+}
+</style>
