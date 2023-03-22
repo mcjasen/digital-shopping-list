@@ -38,14 +38,16 @@
                     </div>
                     <div class="options">
                         <div class="list-element-rename">
-                            <i class="fas fa-pen"
+                            <img src="../assets/pen_yellow.svg" class="fas fa-pen"
+                                width="35"
                                @click="openChangeImage(list)"
-                               title="Bild ändern"></i>
+                               title="Bild ändern"/>
                         </div>
                         <div class="list-element-delete">
-                            <i class="fas fa-times"
-                               @click="deleteList_openPopUp(list)"
-                               title="Liste löschen"></i> 
+                            <img src="../assets/cross_yellow.svg" 
+                                width="35"
+                                @click="deleteList_openPopUp(list)"
+                                title="Liste löschen"/> 
                         </div>
                     </div>
                 </div>
@@ -94,7 +96,7 @@
     import Images from "./Images.vue";
 
 export default {
-    name: 'Lists',
+    name: 'TheLists',
     components: {
         AddList,
         PopUp,

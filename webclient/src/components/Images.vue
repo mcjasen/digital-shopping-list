@@ -6,8 +6,10 @@
             <div class="header">
                 <div class="back-button"
                     @click="closeChangeImage()">
-                    <i class="fas fa-chevron-circle-left"
-                       title="Zurück"></i>
+                    <img src="../assets/back_yellow.svg" 
+                        width="45"
+                        style="margin: 15px 0;"
+                        title="Zurück"/>
                 </div>
                 <div class="search">
                     <input type="text"
@@ -17,9 +19,11 @@
                            placeholder="Suche">
                 </div>
                 <div class="image-remove">
-                    <i class="fas fa-times-circle"
+                    <img src="../assets/cross_yellow.svg"
+                        width="55"
+                        style="margin: 15px 0;"
                        @click="removeImage()"
-                       title="Bild entfernen"></i> 
+                       title="Bild entfernen"/> 
                 </div>
             </div>
 
@@ -48,7 +52,7 @@
 import PicsApi from '../PicsApi';
 
 export default{
-    name: 'Images',
+    name: 'TheImages',
     data(){
         return {
             images: null,

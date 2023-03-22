@@ -8,7 +8,10 @@ services:
       - 8080:80
 
   webserver:
-    build: ./webserver
+    build: 
+      context: ./webserver
+      args:
+        - SPRING_DATASOURCE_URL="jdbc:mysql://mysql:3306/shopping_list"
     restart: always
     ports:
       - 9000:9000
@@ -16,7 +19,7 @@ services:
       - mysql
     command: sh -c './webserver/wait-for mysql:3306 -- npm start'
     environment:
-      spring.datasource.url: "jdbc:mysql://mysql:3306/shopping_list"
+      - SPRING_DATASOURCE_URL=jdbc:mysql://mysql:3306/shopping_list
 
   mysql:
     image: "mysql"

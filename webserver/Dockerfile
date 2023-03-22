@@ -1,5 +1,13 @@
+# build stage
+FROM gradle AS BUILD_STAGE
+WORKDIR /usr/app/
+COPY . .
+RUN gradle clean build -x test
+
+# production stage
 FROM openjdk:11
-VOLUME /main-app
-ADD build/libs/shoppingListServer-0.0.1-SNAPSHOT.jar app.jar
+ENV APP_HOME=/usr/app/
+WORKDIR $APP_HOME
+COPY --from=BUILD_STAGE $APP_HOME/build/libs/*.jar app.jar
 EXPOSE 9000
-ENTRYPOINT ["java", "-jar","/app.jar"]
+ENTRYPOINT exec java -jar app.jar

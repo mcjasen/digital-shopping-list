@@ -3,7 +3,7 @@
         <div v-if="newItemButtonSeen" 
              class="new-item-button"
              @click="openNewItemInput()">
-            <i class="fas fa-plus"></i>
+            <img src="../assets/plus.svg" class="fas fa-plus" width="28" style="margin-right:10px"/>
             <span class="title">
                 Neue Liste
             </span>
@@ -20,8 +20,9 @@
                        autofocus>
                 <div class="options">
                     <div class="list-element-delete">
-                        <i class="fas fa-times"
-                        @click="cancel_addList()"></i> 
+                        <img src="../assets/cross_yellow.svg"
+                            width="45"
+                        @click="cancel_addList()"/> 
                     </div>
                 </div>
             </div>

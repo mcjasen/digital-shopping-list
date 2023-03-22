@@ -6,8 +6,9 @@
       <div class="justify-content-left">
         <div class="lists-back-button"
              @click="openLists()">
-          <i class="fas fa-chevron-circle-left"
-             title="Zurück"></i>
+          <img src="../assets/back.svg"
+              width="50"
+             title="Zurück"/>
         </div>
 
         <input class="list-title"
@@ -18,9 +19,10 @@
 
       <div class="justify-content-right">
         <div class="list-element-rename">
-            <i class="fas fa-pen"
+            <img src="../assets/pen.svg"
+                width="45"
                @click="openChangeTitle()"
-               title="Listennamen ändern"></i>
+               title="Listennamen ändern"/>
         </div>
       </div>
 
@@ -50,10 +52,11 @@
                  alt="">
             <div v-if="item.hover"
                  class="item-options">
-              <i class="fas fa-pen"
+              <img src="../assets/pen_yellow.svg"
+                  width="40"
                  ref="options"
                  @click="showItem(item)"
-                 title="Artikel bearbeiten"></i>
+                 title="Artikel bearbeiten"/>
             </div>
 
             <div class="text">
@@ -100,7 +103,7 @@
   import Api from '../Api'; 
   
   export default {
-    name: 'Items',
+    name: 'TheItems',
     components: {
       AddItem,
       Item,

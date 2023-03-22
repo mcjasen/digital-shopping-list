@@ -1,3 +1,4 @@
+<!-- eslint-disable -->
 <template>
     <div v-if="seen">
         <div class="root">
@@ -6,11 +7,12 @@
                 
                 <div v-if="item.img !== ''"
                      class="image">
-                    <img :src="item.img">
+                    <img class="image-item" :src="item.img">
                     <div class="icon-open-change-image"
                          @click="openImages()">
-                        <i class="fas fa-pen"
-                           title="Bild ändern"></i>
+                        <img src="../assets/pen_yellow.svg"
+                            width="45"
+                            title="Bild ändern"/>
                     </div>
                     <a href="https://pixabay.com/"
                        target="_blank"
@@ -27,8 +29,9 @@
                     </div>
                     <div class="icon-open-change-image"
                          @click="openImages()">
-                        <i class="fas fa-pen"
-                           title="Bild ändern"></i>
+                        <img src="../assets/pen_yellow.svg"
+                            width="45"
+                           title="Bild ändern"/>
                     </div>
                 </div>
 
@@ -57,11 +60,13 @@
 </template>
 
 <script>
+/* eslint-disable */
+
 import Api from '../Api';
 import Images from './Images.vue';
 
 export default {
-    name: 'Item',
+    name: 'TheItem',
     components :{
         Images,
     },
@@ -125,7 +130,7 @@ export default {
     position: relative;
 }
 
-.image img{
+.image-item{
     border-top-left-radius: 24px;
     border-top-right-radius: 24px;
     max-height: 30vh;
