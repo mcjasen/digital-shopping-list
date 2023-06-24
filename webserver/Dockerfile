@@ -1,5 +1,5 @@
 # build stage
-FROM gradle AS BUILD_STAGE
+FROM gradle:7.6.1-jdk11 AS BUILD_STAGE
 WORKDIR /usr/app/
 COPY . .
 RUN gradle clean build -x test
